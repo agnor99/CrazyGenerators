@@ -36,10 +36,9 @@ public class QuestionGeneratorBlock extends GeneratorBlock {
             TileEntity tile = world.getTileEntity(blockPos);
             if(tile instanceof QuestionGeneratorTileEntity) {
                 NetworkHooks.openGui((ServerPlayerEntity) player, (QuestionGeneratorTileEntity)tile, blockPos);
-                return ActionResultType.SUCCESS;
             }
         }
-        return ActionResultType.FAIL;
+        return ActionResultType.SUCCESS;
     }
 
     @Override
